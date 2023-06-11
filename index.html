@@ -802,6 +802,11 @@
         }
 
         @media (max-width: 544px) {
+
+            .elementor-widget-container .head .formlogo {
+                height: 6rem !important;
+            }
+
             .ast-no-sidebar.ast-separate-container .entry-content .alignfull {
                 margin-left: -1em;
                 margin-right: -1em;
@@ -3260,12 +3265,7 @@
     <link rel='stylesheet' id='google-fonts-1-css'
         href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap&#038;ver=6.2.2'
         media='all' />
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><!--n2css--><!--[if IE]>
-<script src='https://aisu4india.in/wp-content/themes/astra/assets/js/minified/flexibility.min.js?ver=4.1.5' id='astra-flexibility-js'></script>
-<script id='astra-flexibility-js-after'>
-flexibility(document.documentElement);
-</script>
-<![endif]-->
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <script src='https://aisu4india.in/wp-includes/js/jquery/jquery.min.js?ver=3.6.4' id='jquery-core-js'></script>
     <script src='https://aisu4india.in/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.0'
         id='jquery-migrate-js'></script>
@@ -3718,6 +3718,12 @@ flexibility(document.documentElement);
                                                         <div class="elementor-widget-container">
                                                             <style>
                                                                 /*! elementor - v3.13.3 - 28-05-2023 */
+                                                                @media screen and (min-width: 767px) {
+                                                                    .elementor-widget-wrap {
+                                                                        padding: 0px 50px !important;
+                                                                    }
+                                                                }
+
                                                                 .elementor-heading-title {
                                                                     padding: 0;
                                                                     margin: 0;
@@ -3882,37 +3888,12 @@ flexibility(document.documentElement);
                                                             </style>
                                                             <div class="elementor-divider">
                                                                 <span class="elementor-divider-separator"
-                                                                    style="width: 53%;">
+                                                                    style="width: 53%; margin-top: -8px; border-color: #fc8c35;">
                                                                 </span>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="elementor-element elementor-element-4a2c6a8 elementor-widget elementor-widget-image"
-                                                        data-id="4a2c6a8" data-element_type="widget"
-                                                        data-widget_type="image.default">
-                                                        <div class="elementor-widget-container">
-                                                            <style>
-                                                                /*! elementor - v3.13.3 - 28-05-2023 */
-                                                                .elementor-widget-image {
-                                                                    text-align: center
-                                                                }
 
-                                                                .elementor-widget-image a {
-                                                                    display: inline-block
-                                                                }
-
-                                                                .elementor-widget-image a img[src$=".svg"] {
-                                                                    width: 48px
-                                                                }
-
-                                                                .elementor-widget-image img {
-                                                                    vertical-align: middle;
-                                                                    display: inline-block
-                                                                }
-                                                            </style> <img decoding="async" src="" title="" alt=""
-                                                                loading="lazy" />
-                                                        </div>
-                                                    </div>
                                                     <div class="elementor-element elementor-element-9b1bd73 elementor-widget elementor-widget-text-editor"
                                                         data-id="9b1bd73" data-element_type="widget"
                                                         data-widget_type="text-editor.default">
@@ -3960,43 +3941,98 @@ flexibility(document.documentElement);
                                                     <div class="elementor-element elementor-element-9fb2c2a elementor-widget elementor-widget-html"
                                                         data-id="9fb2c2a" data-element_type="widget"
                                                         data-widget_type="html.default">
+                                                        <style>
+                                                            .elementor-widget-container .head .formlogo {
+                                                                height: 8rem;
+                                                                display: block;
+                                                                margin: auto;
+                                                            }
+
+                                                            .hover-underline-animation {
+                                                                display: inline-block;
+                                                                position: relative;
+                                                                color:
+                                                                    #fc8c35;
+                                                            }
+
+                                                            .hover-underline-animation:after {
+                                                                content: '';
+                                                                position: absolute;
+                                                                width: 100%;
+                                                                transform: scaleX(0);
+                                                                height: 2px;
+                                                                bottom: 0;
+                                                                left: 0;
+                                                                background-color:
+                                                                    #fc8c35;
+                                                                transform-origin: bottom right;
+                                                                transition: transform 0.25s ease-out;
+                                                            }
+
+                                                            .hover-underline-animation:hover:after {
+                                                                transform: scaleX(1);
+                                                                transform-origin: bottom left;
+                                                            }
+
+                                                            input,
+                                                            textarea,
+                                                            select {
+                                                                border: 2px solid rgb(175, 168, 168) !important;
+                                                            }
+
+                                                            input:focus,
+                                                            textarea:focus,
+                                                            select:focus {
+                                                                border: 2px solid #fc8c35 !important;
+                                                                box-shadow: none !important;
+                                                            }
+                                                        </style>
                                                         <div class="elementor-widget-container">
-                                                            <h2 style="text-align: center;">
-                                                                <img style="height: 5rem;" src="./img/Aisulogo.png"
+                                                            <div class="head" style="text-align: center;">
+                                                                <img class="formlogo" src="./img/Aisu_logo.png"
                                                                     alt="logo">
-                                                                AISU Primary Membership Form
-                                                            </h2>
+                                                                <h2 style="text-align: center;"
+                                                                    class="hover-underline-animation">
+                                                                    <span style="color: #fc8c35;">AISU Primary</span>
+                                                                    Membership Form
+                                                                </h2>
+                                                            </div>
                                                             <p class="lead">
-                                                                Join Hands With <a
+                                                                Join Hands With <a style="color: #fc8c35;"
                                                                     href="https://aisu4india.in/">AISU</a>. AISU is a
                                                                 student Union. Our motive is to work for the welfare of
                                                                 the Society & Stand strongly against injustice in every
                                                                 sphere of the country
                                                             </p>
-                                                            <p><em>For any Query Please Contact Us on -
-                                                                    <b>Email</b> - aisu4india@gmail.com</em><br>
+                                                            <p><em>For any Query Please Contact Us on:
+                                                                    <b>Email</b> - <span
+                                                                        style="color: #fc8c35;">aisu4india@gmail.com</span></em><br>
                                                                 <em>
                                                                     Our Official Twitter Handle: <a
+                                                                        style="color: #fc8c35;"
                                                                         href="https://twitter.com/Official_AISU">Official_AISU</a>
                                                                 </em>
                                                             </p>
+                                                            <p style="color: #fc8c35;">* Indicates required question</p>
                                                             <div class="mb-3">
-                                                                <label for="name" class="form-label">Name :</label>
+                                                                <label for="name" class="form-label">Name : <span
+                                                                        style="color: #fc8c35">*</span></label>
                                                                 <input type="text" class="form-control" id="name"
+                                                                    name="name" placeholder="Enter your name"
                                                                     aria-describedby="nameHelp">
                                                             </div>
                                                             <div class="mb-3">
                                                                 <label for="exampleInputEmail1" class="form-label">Email
-                                                                    :</label>
+                                                                    : <span style="color: #fc8c35">*</span></label>
                                                                 <input type="email" class="form-control"
-                                                                    id="exampleInputEmail1"
-                                                                    aria-describedby="emailHelp">
+                                                                    id="exampleInputEmail1" aria-describedby="emailHelp"
+                                                                    name="email" placeholder="Enter your email">
                                                                 <div id="emailHelp" class="form-text">We'll never
                                                                     share your email with anyone else.</div>
                                                             </div>
                                                             <div class="mb-3">
-                                                                <label for="name" class="form-label">Gender
-                                                                    :</label>
+                                                                <label for="inlineRadio1" class="form-label">Gender
+                                                                    : <span style="color: #fc8c35">*</span></label>
                                                                 <div class="form-check form-check-block">
                                                                     <input class="form-check-input" type="radio"
                                                                         name="inlineRadioOptions" id="inlineRadio1"
@@ -4028,100 +4064,109 @@ flexibility(document.documentElement);
                                                             </div>
                                                             <div class="mb-3">
                                                                 <label for="date" class="form-label">Date of birth
-                                                                    :</label>
+                                                                    : <span style="color: #fc8c35">*</span></label>
                                                                 <input type="date" class="form-control" id="date"
-                                                                    aria-describedby="dateHelp">
+                                                                    aria-describedby="dateHelp" name="DOB">
                                                             </div>
                                                             <div class="mb-3">
                                                                 <label for="contact" class="form-label">Contact No.
-                                                                    :</label>
+                                                                    : <span style="color: #fc8c35">*</span></label>
                                                                 <input type="number" class="form-control" id="contact"
-                                                                    aria-describedby="contactHelp">
+                                                                    aria-describedby="contactHelp" name="contact"
+                                                                    placeholder="Enter your contact no.">
                                                             </div>
                                                             <div class="mb-3">
                                                                 <label for="address" class="form-label">Address
-                                                                    :</label>
+                                                                    : <span style="color: #fc8c35">*</span></label>
                                                                 <input type="text" class="form-control" id="address"
-                                                                    aria-describedby="adressHelp">
+                                                                    aria-describedby="adressHelp" name="address"
+                                                                    placeholder="Enter your address">
                                                             </div>
                                                             <div class="mb-3">
                                                                 <label for="city" class="form-label">City
-                                                                    :</label>
+                                                                    : <span style="color: #fc8c35">*</span></label>
                                                                 <input type="text" class="form-control" id="city"
-                                                                    aria-describedby="cityHelp">
+                                                                    aria-describedby="cityHelp" name="city"
+                                                                    placeholder="Enter your city">
                                                             </div>
                                                             <div class="mb-3">
                                                                 <label for="state" class="form-label">State
-                                                                    :</label>
+                                                                    : <span style="color: #fc8c35">*</span></label>
                                                                 <input type="text" class="form-control" id="state"
-                                                                    aria-describedby="stateHelp">
+                                                                    aria-describedby="stateHelp" name="state"
+                                                                    placeholder="Enter your state">
                                                             </div>
                                                             <div class="mb-3">
                                                                 <label for="pincode" class="form-label">Pincode
-                                                                    :</label>
+                                                                    : <span style="color: #fc8c35">*</span></label>
                                                                 <input type="number" class="form-control" id="pincode"
-                                                                    aria-describedby="pincodeHelp">
+                                                                    aria-describedby="pincodeHelp" name="pincode"
+                                                                    placeholder="Enter your pincode">
                                                             </div>
                                                             <div class="mb-3">
                                                                 <label for="university" class="form-label">Current
                                                                     Institution/University
-                                                                    :</label>
+                                                                    : <span style="color: #fc8c35">*</span></label>
                                                                 <input type="text" class="form-control" id="university"
-                                                                    aria-describedby="universityHelp">
+                                                                    aria-describedby="universityHelp" name="university"
+                                                                    placeholder="Enter your university">
+                                                            </div>
+                                                            <div class="form-group mb-3">
+                                                                <label for="exampleFormControlTextarea4"
+                                                                    class="mb-2">Why do
+                                                                    you
+                                                                    want to join the AISU? <span
+                                                                        style="color: #fc8c35">*</span>
+                                                                </label>
+                                                                <textarea class="form-control"
+                                                                    id="exampleFormControlTextarea4" rows="3"
+                                                                    name="whyAISU"
+                                                                    placeholder="Enter your comment"></textarea>
                                                             </div>
                                                             <div class="mb-3">
-                                                                <div class="form-group purple-border">
-                                                                    <label for="exampleFormControlTextarea4">Why do
-                                                                        you
-                                                                        want to join the AISU?
-                                                                    </label>
-                                                                    <textarea class="form-control"
-                                                                        id="exampleFormControlTextarea4"
-                                                                        rows="3"></textarea>
-                                                                </div>
-                                                            </div>
-                                                            <div class="mb-3">
-                                                                <label for="name" class="form-label">How did you
-                                                                    hear about us?
+                                                                <label for="inlineRadio5" class="form-label">How did you
+                                                                    hear about us? <span style="color: #fc8c35">*</span>
                                                                 </label>
                                                                 <div class="form-check form-check-block">
                                                                     <input class="form-check-input" type="radio"
-                                                                        name="inlineRadioOptions" id="inlineRadio1"
+                                                                        name="inlineRadioOptions2" id="inlineRadio5"
                                                                         value="option1">
                                                                     <label class="form-check-label"
-                                                                        for="inlineRadio1">Social media (Facebook,
+                                                                        for="inlineRadio5">Social media (Facebook,
                                                                         Twitter, Instagram, etc.)</label>
                                                                 </div>
                                                                 <div class="form-check form-check-block">
                                                                     <input class="form-check-input" type="radio"
-                                                                        name="inlineRadioOptions" id="inlineRadio2"
+                                                                        name="inlineRadioOptions2" id="inlineRadio6"
                                                                         value="option2">
                                                                     <label class="form-check-label"
-                                                                        for="inlineRadio2">Word of mouth</label>
+                                                                        for="inlineRadio6">Word of mouth</label>
                                                                 </div>
                                                                 <div class="form-check form-check-block">
                                                                     <input class="form-check-input" type="radio"
-                                                                        name="inlineRadioOptions" id="inlineRadio3"
+                                                                        name="inlineRadioOptions2" id="inlineRadio7"
                                                                         value="option3">
                                                                     <label class="form-check-label"
-                                                                        for="inlineRadio3">Internet search</label>
+                                                                        for="inlineRadio7">Internet search</label>
                                                                 </div>
                                                                 <div class="form-check form-check-block">
                                                                     <input class="form-check-input" type="radio"
-                                                                        name="inlineRadioOptions" id="inlineRadio3"
+                                                                        name="inlineRadioOptions2" id="inlineRadio8"
                                                                         value="option3">
                                                                     <label class="form-check-label"
-                                                                        for="inlineRadio3">Other</label>
+                                                                        for="inlineRadio8">Other</label>
                                                                 </div>
                                                             </div>
                                                             <div class="mb-3">
-                                                                <label for="university" class="form-label">How would
+                                                                <label for="howAISU" class="form-label">How would
                                                                     you like to
-                                                                    contribute to the AlSU?
+                                                                    contribute to the AlSU? <span
+                                                                        style="color: #fc8c35">*</span>
                                                                     :</label>
                                                                 <select class="form-select"
-                                                                    aria-label="Default select example">
-                                                                    <option selected>Choose</option>
+                                                                    aria-label="Default select example" name="howAISU"
+                                                                    id="howAISU">
+                                                                    <option selected>Choose option</option>
                                                                     <option value="1">Participate in AISU Campaigns
                                                                         and programs</option>
                                                                     <option value="2">Conduct workshops or seminars
@@ -4137,33 +4182,61 @@ flexibility(document.documentElement);
                                                             <div class="mb-3">
                                                                 <label for="formFile" class="form-label">For Payment
                                                                     Please Scan the below and attach the Screenshot
-                                                                    : </label>
+                                                                    : <span style="color: #fc8c35">*</span> </label>
                                                                 <div class="card" style="width: 18rem;">
-                                                                    <img src="./img/IMG_20230610_095858.png"
+                                                                    <img src="./img/paymentQR.png"
                                                                         class="card-img-top" alt="QRCODE">
                                                                 </div>
                                                                 <div class="mb-3 mt-3">
                                                                     <input class="form-control" type="file"
-                                                                        id="formFile">
+                                                                        name="formfile" id="formFile">
                                                                 </div>
                                                             </div>
                                                             <div class="mb-3">
-                                                                Declaration :
+                                                                <span style="font-weight: bolder;">Declaration : <span
+                                                                        style="color: #fc8c35">*</span></span>
                                                                 <div class="form-check">
                                                                     <input class="form-check-input" type="checkbox"
-                                                                        value="" id="flexCheckDefault">
+                                                                        value="" id="flexCheckDefault1"
+                                                                        name="flexCheckDefault1">
                                                                     <label class="form-check-label"
-                                                                        for="flexCheckDefault">
+                                                                        for="flexCheckDefault1">
                                                                         I hereby declare that all the information
                                                                         provided above is true and accurate to the
                                                                         best of my knowledge. I understand that
                                                                         providing false information may result in
-                                                                        the termination of my membership.
+                                                                        the cancellation of my membership.
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        value="" id="flexCheckDefault2"
+                                                                        name="flexCheckDefault2">
+                                                                    <label class="form-check-label"
+                                                                        for="flexCheckDefault2">
+                                                                        I agree to abide by the rules and regulations of
+                                                                        AISU and understand that my membership can be
+                                                                        terminated if I engage in any activities that
+                                                                        are contrary to the objectives of the
+                                                                        organization.
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        value="" id="flexCheckDefault3"
+                                                                        name="flexCheckDefault3">
+                                                                    <label class="form-check-label"
+                                                                        for="flexCheckDefault3">
+                                                                        I agree to pay the membership fee of Rs. 10 upon
+                                                                        submitting this form.
                                                                     </label>
                                                                 </div>
                                                             </div>
-                                                            <button type="submit"
-                                                                class="btn btn-primary">Submit</button>
+                                                            <div style="text-align: center;">
+                                                                <button type="submit"
+                                                                    style="border-radius: 10px !important;"
+                                                                    class="btn btn-dark">Submit</button>
+                                                            </div>
                                                             </form>
                                                         </div>
                                                     </div>
